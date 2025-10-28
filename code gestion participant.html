@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestion des Inscrits - Team Building Estival 2024</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1313ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101022",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col dark group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex flex-col gap-2 bg-background-light dark:bg-background-dark p-4 pb-2 sticky top-0 z-10 border-b border-white/10">
+<div class="flex items-center h-12 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-center text-white dark:text-white/80">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+</div>
+<p class="text-slate-900 dark:text-white tracking-light text-[28px] font-bold leading-tight">Team Building Estival 2024</p>
+</div>
+<!-- BodyText -->
+<div>
+<p class="text-slate-600 dark:text-white/60 text-base font-normal leading-normal pb-3 pt-1 px-4">Total des inscrits : 85</p>
+</div>
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-500 dark:text-[#9d9db9] flex border border-slate-300 dark:border-white/20 bg-white/50 dark:bg-white/10 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-slate-300 dark:border-white/20 bg-white/50 dark:bg-white/10 focus:border-primary h-full placeholder:text-slate-500 dark:placeholder:text-[#9d9db9] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Chercher par nom, prénom, email..."/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto">
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary/90 text-white pl-4 pr-4"><p class="text-sm font-medium leading-normal">Tous</p></div>
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-white/10 pl-4 pr-4"><p class="text-slate-700 dark:text-white/80 text-sm font-medium leading-normal">Payé</p></div>
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-white/10 pl-4 pr-4"><p class="text-slate-700 dark:text-white/80 text-sm font-medium leading-normal">En attente</p></div>
+</div>
+<!-- ButtonGroup -->
+<div class="flex justify-stretch">
+<div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-between">
+<button class="flex-1 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contacter tout le monde</span>
+</button>
+<button class="flex-1 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Exporter la liste</span>
+</button>
+</div>
+</div>
+<!-- Participant List -->
+<div class="flex flex-col gap-3 px-4 py-3">
+<!-- Participant Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl p-4 bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white">Léa Dubois</p>
+<p class="text-sm text-slate-500 dark:text-white/60">lea.dubois@example.com</p>
+</div>
+<div class="flex h-6 items-center justify-center gap-x-1 rounded-full bg-green-100 dark:bg-green-500/20 px-3 py-1">
+<p class="text-xs font-medium text-green-800 dark:text-green-400">Payé</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 border-t border-slate-200 dark:border-white/10 pt-3">
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+<!-- Participant Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl p-4 bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white">Marc Petit</p>
+<p class="text-sm text-slate-500 dark:text-white/60">marc.petit@example.com</p>
+</div>
+<div class="flex h-6 items-center justify-center gap-x-1 rounded-full bg-orange-100 dark:bg-orange-500/20 px-3 py-1">
+<p class="text-xs font-medium text-orange-800 dark:text-orange-400">En attente</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 border-t border-slate-200 dark:border-white/10 pt-3">
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+<!-- Participant Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl p-4 bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white">Chloé Martin</p>
+<p class="text-sm text-slate-500 dark:text-white/60">chloe.martin@example.com</p>
+</div>
+<div class="flex h-6 items-center justify-center gap-x-1 rounded-full bg-green-100 dark:bg-green-500/20 px-3 py-1">
+<p class="text-xs font-medium text-green-800 dark:text-green-400">Payé</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 border-t border-slate-200 dark:border-white/10 pt-3">
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+<!-- Participant Card 4 -->
+<div class="flex flex-col gap-4 rounded-xl p-4 bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white">Julien Bernard</p>
+<p class="text-sm text-slate-500 dark:text-white/60">julien.bernard@example.com</p>
+</div>
+<div class="flex h-6 items-center justify-center gap-x-1 rounded-full bg-red-100 dark:bg-red-500/20 px-3 py-1">
+<p class="text-xs font-medium text-red-800 dark:text-red-400">Annulé</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 border-t border-slate-200 dark:border-white/10 pt-3">
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-white/70">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg hover:bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+</body></html>

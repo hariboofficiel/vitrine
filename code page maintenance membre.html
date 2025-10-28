@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noxxworks - Maintenance en cours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8A2BE2", /* Violet électrique */
+              "background-light": "#f6f6f8",
+              "background-dark": "#1A1A2E", /* Bleu nuit/gris anthracite */
+              "surface-dark": "#282839",
+              "accent-cyan": "#00FFFF",
+              "accent-magenta": "#FF00FF"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            animation: {
+                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="flex w-full grow flex-col items-center justify-center p-6 text-center">
+<!-- Logo/Illustration principale -->
+<div class="relative w-full max-w-xs mx-auto mb-8">
+<div class="absolute inset-0 bg-primary/30 blur-2xl rounded-full animate-pulse-slow"></div>
+<div class="relative w-full gap-1 overflow-hidden bg-transparent @[480px]:gap-2 aspect-square rounded-lg flex">
+<div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex-1" data-alt="Logo de la Team NoxxWorks, une manette de jeu stylisée avec des éclairs et des formes géométriques" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8AvMG8V7JRaYblh7bNm-PlyRJU6RzR1F_mc7low-WvYn0ltEyajshWbq1Q25Bbj3harRndvdEHNc-qN6U5f42m7bs6dWuzF6t_kkbn2AIu7_xTdrHX1RoSBMkEFghNvAOyxeQHmL5NmKTGh_j0cpCEKxfHTHp4ps28NGE7U5z69yO5Vg6lU1vVAkNyzNchviR8bPb24hkSU0FrJmq3sMVmOn06OY1ciFBrt4932QaCFClDywedCoDfWB59-s6LuhSTW4cvS1-YMNP");'></div>
+</div>
+</div>
+<!-- Titre principal -->
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight pb-3">Un petit coup de polish !</h1>
+<!-- Paragraphe descriptif -->
+<p class="text-slate-300 text-base font-normal leading-normal max-w-md mx-auto">
+                Nous améliorons l'application pour vous offrir une expérience encore plus incroyable. On revient très vite !
+            </p>
+<!-- Zone d'estimation du temps -->
+<div class="w-full max-w-md mx-auto mt-8">
+<div class="flex gap-4 py-4 px-4 bg-black/20 dark:bg-surface-dark/50 rounded-xl border border-white/10">
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-16 grow items-center justify-center rounded-lg px-3 bg-background-dark/80">
+<p class="text-white text-3xl font-bold leading-tight tracking-[-0.015em]">02</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-slate-400 text-sm font-normal leading-normal">Heures</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-16 grow items-center justify-center rounded-lg px-3 bg-background-dark/80">
+<p class="text-white text-3xl font-bold leading-tight tracking-[-0.015em]">30</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-slate-400 text-sm font-normal leading-normal">Minutes</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-16 grow items-center justify-center rounded-lg px-3 bg-background-dark/80">
+<p class="text-white text-3xl font-bold leading-tight tracking-[-0.015em]">00</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-slate-400 text-sm font-normal leading-normal">Secondes</p></div>
+</div>
+</div>
+<p class="text-slate-400 text-sm font-normal leading-normal pt-4 px-4 text-center">Retour prévu très prochainement</p>
+</div>
+<!-- Liens vers les réseaux sociaux -->
+<div class="mt-12 w-full">
+<p class="text-slate-300 text-base font-normal leading-normal pb-4">
+                    En attendant, rejoins-nous sur :
+                </p>
+<div class="flex items-center justify-center gap-4">
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-dark hover:bg-primary transition-colors duration-300 group" href="#">
+<img alt="Discord Icon" class="h-6 w-6 transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi7j8pK1DB6vNaT60kPLj0PlguES-yRCZV5YGA5L7FKaVQJcwV8IYe-EWVtDWoBeF-GzDIQixuSiRPdNSEcj0LN6C3kwrpD70U4O_FQI_o1Q53fkdW-3t6IWQgvwbS1e6N4W_rsvLQAMLCIi85855t1svv2gN1PXADcIVGaH9Ev7AIYtG8INoUwbRgBRia40klGQVPWBRNZKdhOgoz1QleYz4ooyoEMQmr8ihkofnUXfViG2FKCU5srJfC8yFWDuYUwkFIXHJcDaBm"/>
+</a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-dark hover:bg-accent-magenta transition-colors duration-300 group" href="#">
+<img alt="TikTok Icon" class="h-6 w-6 transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkJjvLT90fkRbrBSW7aCyEIGAQ2PIpRHVU3lt7xo7rSBksd-jW6JV9b9yiOxJepya3g2JAaDgxkUWN0SzW5yApmPovBF1PdL5NOhOXwxf5A9QXZUxxMxntDkPow2vH6b6xszxrrND2Kxe_Tmqzld7dtys92pYzSiMJkcWqm_WdmlN4OlSrXC2qOl4zlPZoccZkvvQDtkeWoCb8QV_gjmZN0gbvhdFXTC86VAutptymrQBdgyE8GssRYJVNlXVpl-cafIiJxJacBhBz"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</body></html>

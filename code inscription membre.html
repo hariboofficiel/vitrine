@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mes Événements - Noxxworks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1313ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101022",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2">
+<h1 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1">Mes Événements</h1>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+</button>
+</header>
+<main class="flex flex-col flex-1 px-4">
+<!-- Segmented Buttons: View Toggle -->
+<div class="flex py-3">
+<div class="flex h-11 flex-1 items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-slate-900 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 dark:text-slate-400 text-sm font-bold leading-normal transition-colors duration-200">
+<span class="truncate">Calendrier</span>
+<input checked="" class="invisible w-0" name="view-toggle" type="radio" value="Calendrier"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-slate-900 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 dark:text-slate-400 text-sm font-bold leading-normal transition-colors duration-200">
+<span class="truncate">Liste</span>
+<input class="invisible w-0" name="view-toggle" type="radio" value="Liste"/>
+</label>
+</div>
+</div>
+<!-- Calendar Picker -->
+<div class="flex min-w-72 flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button class="text-slate-900 dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight flex-1 text-center">Octobre 2024</p>
+<button class="text-slate-900 dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">L</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">J</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">V</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">D</p>
+<button class="h-12 w-full text-slate-400 dark:text-slate-600 col-start-1 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">1</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">4</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal relative">
+<div class="flex size-full items-center justify-center rounded-full">5</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-cyan-500"></div>
+</button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">8</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">9</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">10</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">11</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">12</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-12 w-full text-white text-sm font-bold leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/30">16</div>
+</button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal relative">
+<div class="flex size-full items-center justify-center rounded-full">17</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-orange-500"></div>
+</button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal relative">
+<div class="flex size-full items-center justify-center rounded-full">25</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-cyan-500"></div>
+</button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-slate-900 dark:text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">31</div></button>
+</div>
+</div>
+<!-- Events List for selected day -->
+<div class="flex flex-col gap-3 mt-4 pb-24">
+<p class="text-sm font-bold text-slate-900 dark:text-white px-2">Aujourd'hui, 16 Octobre</p>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/70 p-4 min-h-[72px] rounded-lg shadow-sm">
+<div class="text-white flex items-center justify-center rounded-lg bg-cyan-500/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-cyan-500">design_services</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Atelier Design System</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Salle de conférence B</p>
+</div>
+<div class="shrink-0"><p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">14h30</p></div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/70 p-4 min-h-[72px] rounded-lg shadow-sm">
+<div class="text-white flex items-center justify-center rounded-lg bg-orange-500/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-orange-500">sports_golf</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Team Building Bowling</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Bowling de la ville</p>
+</div>
+<div class="shrink-0"><p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">19h00</p></div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/40 transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</body></html>

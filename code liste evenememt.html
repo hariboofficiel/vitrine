@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noxxworks Événements</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Événements à venir</h1>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-200 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white">person</span>
+</button>
+</header>
+<!-- Search and Filters -->
+<div class="px-4 py-3">
+<label class="flex w-full min-w-40 flex-col">
+<div class="flex h-12 w-full flex-1 items-stretch rounded-xl">
+<div class="flex items-center justify-center rounded-l-xl border-y border-l border-zinc-200 bg-zinc-100 pl-4 dark:border-zinc-700 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">search</span>
+</div>
+<input class="form-input h-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl border-y border-r border-zinc-200 bg-zinc-100 px-4 text-base font-normal leading-normal text-zinc-900 placeholder:text-zinc-500 focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white dark:placeholder:text-zinc-400" placeholder="Rechercher un événement..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex gap-3 overflow-x-auto px-4 pb-4 [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary pl-4 pr-4">
+<span class="material-symbols-outlined text-white" style="font-size: 20px;">calendar_today</span>
+<p class="text-sm font-medium leading-normal text-white">Date</p>
+<span class="material-symbols-outlined text-white" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 pl-4 pr-4 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">groups</span>
+<p class="text-sm font-medium leading-normal text-zinc-900 dark:text-white">Team Building</p>
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 pl-4 pr-4 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">model_training</span>
+<p class="text-sm font-medium leading-normal text-zinc-900 dark:text-white">Workshop</p>
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 pl-4 pr-4 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">celebration</span>
+<p class="text-sm font-medium leading-normal text-zinc-900 dark:text-white">Détente</p>
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+</div>
+<!-- Event List -->
+<main class="flex flex-col gap-4 px-4 pb-24">
+<!-- Event Card 1 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start overflow-hidden rounded-xl bg-white shadow-sm dark:bg-zinc-900">
+<div class="aspect-video w-full bg-cover bg-center bg-no-repeat" data-alt="People bowling and laughing in a bowling alley" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3UovllWHJDkA6Mu_nZjENQNZ5u-nYiwUYSkqVsyyLPGoINxHVywhzNp_EtYca4RnB9k59weoGVILNosF91XPZ2A9IX4Ds4GLzEyRKXiHuLEzBmoAgUbeGfDvY8YJJvXQsEA0q1C1_1xP7YU8nOIl90kbY25km83jSRT_V_IcAlhCnIQwN_9Gz5LDXOokCppRzYiKNzmlGe8M_Ns4B5Hnhm8Mj0ZavMKKALHT2C737C6bwwYGNSaBK-fzW0N5CwkgQUGLPDkBhwt7c");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-medium leading-normal text-primary">SAM. 25 OCT. - 19:00</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Soirée Bowling &amp; Pizza</p>
+<p class="text-base font-normal leading-normal text-zinc-600 dark:text-zinc-400">Rejoignez-nous pour une soirée de compétition amicale...</p>
+<div class="mt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400" style="font-size: 20px;">group</span>
+<p class="text-sm font-normal leading-normal text-zinc-600 dark:text-zinc-400">12 participants</p>
+</div>
+<button class="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/20 px-4 text-sm font-medium leading-normal text-primary">
+<span class="truncate">Détente</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start overflow-hidden rounded-xl bg-white shadow-sm dark:bg-zinc-900">
+<div class="aspect-video w-full bg-cover bg-center bg-no-repeat" data-alt="A workshop with people collaborating around a table with sticky notes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsMjN7LDF1m47aCv5KmKhN1UcgwDfizxaGgakS-Kje43Osz-8DprsZQwIaGdoss2EI6CmqpB5l2I8rDbKCRBGpLrA22jNkf_V7z7KGnSZlnzxznG8OczbyUI64eAtmUA_eRDzVz4-Gy-TS06FbknK9044nVQMSx9G1p6RCRSz1xMKS1QXrBkZVZ9XCS8zL6jBYOu8bcTr8YLwaBipcbsaio89AayhWIe2ob1KatSwgLylsp0q793s2kIl12Ve8ELSjVbbp6GWWqOsI");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-medium leading-normal text-primary">MAR. 28 OCT. - 10:00</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Atelier Design Thinking</p>
+<p class="text-base font-normal leading-normal text-zinc-600 dark:text-zinc-400">Apprenez les bases du Design Thinking avec notre expert...</p>
+<div class="mt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400" style="font-size: 20px;">group</span>
+<p class="text-sm font-normal leading-normal text-zinc-600 dark:text-zinc-400">8 participants</p>
+</div>
+<button class="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/20 px-4 text-sm font-medium leading-normal text-primary">
+<span class="truncate">Workshop</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start overflow-hidden rounded-xl bg-white shadow-sm dark:bg-zinc-900">
+<div class="aspect-video w-full bg-cover bg-center bg-no-repeat" data-alt="Group of people hiking on a mountain trail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXj0whjvCXu0-mXa9Lfns3rzyNbjUn8TlevAYtsr9YJlaCn5-WqOkXVrtjHfZMiRqXg-YxTK9W9xe2trwZ1dnr6EJ6t08DBbPOZ5gSWnWVVVxC4i6kabU5KL19bXUyMeQmYAe0hiddYZnD3rGVIx7i_KhaTuVt-FhCi3TFL-FOj73Koyr5Jk1-OwGbBXljYiMLUvaiWVK8Tv9BU6LZmmJZaTQuohXpxEDUAuCYUbBalOjg6x12_vRS2Z2Ne769uoWkaqtQ7XVBJziZ");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-medium leading-normal text-primary">VEN. 7 NOV. - 09:00</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Randonnée d'équipe</p>
+<p class="text-base font-normal leading-normal text-zinc-600 dark:text-zinc-400">Une journée pour se ressourcer en nature et renforcer les liens.</p>
+<div class="mt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400" style="font-size: 20px;">group</span>
+<p class="text-sm font-normal leading-normal text-zinc-600 dark:text-zinc-400">15 participants</p>
+</div>
+<button class="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/20 px-4 text-sm font-medium leading-normal text-primary">
+<span class="truncate">Team Building</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 right-6 z-20">
+<button class="flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</div>
+</body></html>

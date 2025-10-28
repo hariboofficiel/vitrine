@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NoxxWorks - Connexion Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#5865F2",
+            "background-light": "#f6f6f8",
+            "background-dark": "#1E1F22",
+            "card-dark": "#313338",
+            "input-dark": "#232428",
+            "text-muted-dark": "#949BA4",
+            "text-main-dark": "#F2F3F5",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.375rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: 100dvh;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark dark font-display text-text-main-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="w-full max-w-sm">
+<div class="mb-8 flex flex-col items-center text-center">
+<div class="mb-4 h-20 w-20 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHOTSsoQjEDoKk-IFJvJWjwOMghWC0Lppb7MmbfHGvTYyuM2WztYpFpP7i5cmf0gGl5oMDTjCyqOutvgvJY3GtWtIG0JbC3cvMfo6DaxZl3rLfnvWi4cPBE3g9GTa7w_itcwCr4TKVXQ_EnVeGb_vtMECsqYtVDOgKtqmxngzq98vUBX-GkI9ZygTiiJPY44Tj8cjScWaOkpIGdE3uv4j89SrbODO8AefVnFxPHSo0RmXdRolfeUOFgdPI5OlchG6g35YNax7_i9pX");'></div>
+<h1 class="text-3xl font-bold tracking-tight text-text-main-dark">Accès Administrateur</h1>
+<p class="mt-2 text-base text-text-muted-dark">Connectez-vous pour gérer les événements.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-4">
+<div>
+<label class="mb-2 block text-sm font-medium text-text-muted-dark" for="email">Adresse e-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-text-muted-dark">mail</span>
+<input class="form-input h-12 w-full rounded-lg border-none bg-input-dark pl-10 pr-4 text-text-main-dark placeholder:text-text-muted-dark/70 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" id="email" placeholder="exemple@noxx.works" type="email" value=""/>
+</div>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-text-muted-dark" for="password">Mot de passe</label>
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-text-muted-dark">lock</span>
+<input class="form-input h-12 w-full rounded-lg border-none bg-input-dark pl-10 pr-10 text-text-main-dark placeholder:text-text-muted-dark/70 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" id="password" placeholder="••••••••••••" type="password" value=""/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted-dark" type="button">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-primary px-5 text-base font-bold text-white transition-colors hover:bg-primary/90 active:bg-primary/80" type="submit">
+<span>Se connecter</span>
+</button>
+</div>
+<div class="text-center">
+<a class="text-sm font-medium text-primary transition-colors hover:text-primary/80" href="#">Mot de passe oublié ?</a>
+</div>
+</form>
+</div>
+<footer class="absolute bottom-4 text-center">
+<p class="text-xs text-text-muted-dark">© 2024 Team NoxxWorks. Tous droits réservés.</p>
+</footer>
+</div>
+
+</body></html>

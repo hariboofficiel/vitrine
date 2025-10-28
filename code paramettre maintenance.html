@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noxxworks - Panneau d'Administration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E040FB",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#1A1A2E",
+                        "accent": "#00E5FF",
+                        "success": "#00FF7F",
+                        "danger": "#FF5252"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-4 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<button class="flex size-10 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-white">Panneau d'Administration</h1>
+<div class="size-10"></div> <!-- Spacer -->
+</div>
+<main class="flex-1 px-4 pb-8 pt-4">
+<div class="mx-auto max-w-2xl space-y-8">
+<!-- Section 1: Statut Général -->
+<section>
+<h2 class="px-2 pb-3 text-sm font-bold uppercase tracking-wider text-primary">Statut Général</h2>
+<div class="space-y-2 rounded-xl bg-white/5 p-2">
+<!-- Maintenance Mode Toggle -->
+<div class="flex min-h-[72px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10">
+<div class="flex items-start gap-4">
+<div class="mt-1 flex size-10 shrink-0 items-center justify-center rounded-lg bg-danger/20 text-danger">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-semibold leading-normal text-white">Mode Maintenance</p>
+<p class="text-sm font-normal leading-normal text-white/60">Activez pour mettre l'application hors ligne.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full bg-white/10 p-0.5 transition-colors has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform duration-300 ease-in-out" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="peer absolute h-0 w-0 opacity-0" type="checkbox"/>
+<span class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform rounded-full transition-transform duration-300 ease-in-out peer-checked:translate-x-2"></span>
+</label>
+</div>
+</div>
+<!-- App Status Indicator -->
+<div class="flex min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-success/20 text-success">
+<span class="material-symbols-outlined">signal_cellular_alt</span>
+</div>
+<p class="flex-1 text-base font-medium leading-normal text-white">Statut de l'application</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-success/20 px-3 py-1 text-sm font-semibold text-success">
+<div class="size-2 rounded-full bg-success"></div>
+<span>En ligne</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Outils Système -->
+<section>
+<h2 class="px-2 pb-3 text-sm font-bold uppercase tracking-wider text-primary">Outils Système</h2>
+<div class="space-y-2 rounded-xl bg-white/5 p-2">
+<!-- System Logs -->
+<button class="flex w-full min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 text-left transition-colors hover:bg-white/10">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/20 text-accent">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<p class="text-base font-medium leading-normal text-white">Consulter les Logs Système</p>
+</div>
+<span class="material-symbols-outlined text-white/50">chevron_right</span>
+</button>
+<!-- Clear Cache -->
+<button class="flex w-full min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 text-left transition-colors hover:bg-white/10">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/20 text-accent">
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+<p class="text-base font-medium leading-normal text-white">Vider le Cache</p>
+</div>
+<span class="material-symbols-outlined text-white/50">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 3: Notifications Globales -->
+<section>
+<h2 class="px-2 pb-3 text-sm font-bold uppercase tracking-wider text-primary">Notifications Globales</h2>
+<div class="space-y-4 rounded-xl bg-white/5 p-4">
+<p class="text-sm text-white/60">Envoyez une annonce importante à tous les utilisateurs de l'application.</p>
+<div>
+<textarea class="w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-base text-white placeholder-white/40 transition-colors focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/50" id="notification-message" name="notification-message" placeholder="Rédigez votre message ici..." rows="4"></textarea>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-base font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-opacity-90 active:scale-95">
+<span class="material-symbols-outlined">send</span>
+<span>Envoyer la Notification</span>
+</button>
+</div>
+</section>
+<!-- Section 4: Paramètres Avancés -->
+<section>
+<h2 class="px-2 pb-3 text-sm font-bold uppercase tracking-wider text-primary">Paramètres Avancés</h2>
+<div class="space-y-2 rounded-xl bg-white/5 p-2">
+<!-- User Management -->
+<a class="flex min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white/80">
+<span class="material-symbols-outlined">group</span>
+</div>
+<p class="text-base font-medium leading-normal text-white">Gestion des utilisateurs</p>
+</div>
+<span class="material-symbols-outlined text-white/50">chevron_right</span>
+</a>
+<!-- Version Management -->
+<a class="flex min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white/80">
+<span class="material-symbols-outlined">apps</span>
+</div>
+<p class="text-base font-medium leading-normal text-white">Gestion des versions</p>
+</div>
+<span class="material-symbols-outlined text-white/50">chevron_right</span>
+</a>
+<!-- API Settings -->
+<a class="flex min-h-[56px] items-center justify-between gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white/80">
+<span class="material-symbols-outlined">api</span>
+</div>
+<p class="text-base font-medium leading-normal text-white">Paramètres API</p>
+</div>
+<span class="material-symbols-outlined text-white/50">chevron_right</span>
+</a>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>
